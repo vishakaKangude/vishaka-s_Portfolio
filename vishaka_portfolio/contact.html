@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Vishaka</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Vishaka</h1>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+        <button id="toggleTheme" title="Toggle Theme">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>📬 Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <input type="text" id="subject" name="subject" placeholder="Subject" required />
+      <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

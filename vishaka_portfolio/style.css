@@ -1,0 +1,370 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e1e1e1;
+}
+nav, .home, .projects, .about, .contact, .resume-section {
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+nav {
+  background-color: #000;
+  color: #b3b3b3;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  flex: 1;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+  background-color: #1db954;
+}
+#toggleTheme {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#toggleTheme:hover {
+  color: #fff;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.home img {
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #1db954;
+  transition: transform 0.4s, box-shadow 0.4s;
+  margin-bottom: 1rem;
+}
+.home img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+.home h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.home p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.home p a {
+  color: #1db954;
+  text-decoration: none;
+}
+.home p a:hover {
+  text-decoration: underline;
+}
+
+/* Projects */
+.projects {
+  padding: 2rem;
+  background-color: #181818;
+}
+.project-card {
+  background-color: #282828;
+  border-left: 5px solid #1db954;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  transition: background 0.3s;
+}
+.project-card:hover {
+  background-color: #333;
+}
+.project-card h3 {
+  color: #fff;
+}
+.project-card p,
+.project-card li {
+  color: #ccc;
+}
+.project-card a {
+  color: #1db954;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project-card a:hover {
+  color: #1ed760;
+  text-decoration: underline;
+}
+
+/* About */
+.about {
+  padding: 2rem;
+  background-color: #181818;
+}
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #282828;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.about-container h2,
+.about-container h3 {
+  color: #1db954;
+}
+.about-container ul {
+  list-style-type: "✔️ ";
+  padding-left: 1.5rem;
+}
+.about-container p {
+  color: #ccc;
+}
+
+/* Contact */
+.contact {
+  background-color: #121212;
+  padding: 2rem;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1db954;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #181818;
+  border-radius: 8px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  background-color: #282828;
+  color: #e1e1e1;
+  border: 1px solid #444;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #1db954;
+}
+.contact button {
+  padding: 12px;
+  background-color: #1db954;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.contact button:hover {
+  background-color: #1ed760;
+  transform: scale(1.03);
+}
+
+/* Resume Section */
+.resume-section {
+  background-color: #181818;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+.resume-container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #282828;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+.resume-container h2 {
+  color: #1db954;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.resume-container p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.resume-btn {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.resume-btn.download {
+  background-color: #1db954;
+  color: #121212;
+}
+.resume-btn.view {
+  background-color: transparent;
+  color: #1db954;
+  border: 2px solid #1db954;
+}
+.resume-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Light Theme */
+body.light {
+  background-color: #f9f9f9;
+  color: #121212;
+}
+body.light nav {
+  background-color: #fff;
+}
+body.light nav h1,
+body.light nav a,
+body.light #toggleTheme {
+  color: #121212;
+}
+body.light nav a:hover,
+body.light nav a.active {
+  background-color: #e91e63;
+  color: #fff;
+}
+body.light .home,
+body.light .projects,
+body.light .about,
+body.light .contact,
+body.light .resume-section {
+  background-color: #fff;
+  color: #121212;
+}
+body.light .home h2,
+body.light .project-card h3,
+body.light .about-container h2,
+body.light .about-container h3,
+body.light .resume-container h2 {
+  color: #000;
+}
+body.light .home p,
+body.light .project-card p,
+body.light .project-card li,
+body.light .about-container p,
+body.light .resume-container p {
+  color: #333;
+}
+body.light .project-card {
+  background-color: #f7f7f7;
+  border-left-color: #e91e63;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+body.light .project-card a {
+  color: #e91e63;
+}
+body.light .project-card a:hover {
+  color: #c2185b;
+}
+body.light .about-container {
+  background-color: #fff;
+}
+body.light .resume-container {
+  background-color: #f9f9f9;
+}
+body.light .resume-btn.download {
+  background-color: #e91e63;
+  color: #fff;
+}
+body.light .resume-btn.view {
+  border-color: #e91e63;
+  color: #e91e63;
+}
+body.light .contact form {
+  background-color: #fff;
+}
+body.light .contact input,
+body.light .contact textarea {
+  background-color: #fff;
+  color: #121212;
+  border: 1px solid #ccc;
+}
+body.light .contact button {
+  background-color: #e91e63;
+  color: white;
+}
+body.light .contact button:hover {
+  background-color: #c2185b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+  .home h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
